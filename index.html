@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 4</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Younghyo Park</strong> - <em>younghyo@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: "Women's gains in higher education have failed to close the gender employment gap."</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="viz_for.png" alt="Scatter plot showing the education-employment paradox: in 71 out of 158 countries, women have higher tertiary enrollment but also higher unemployment than men." />
+				<figcaption>
+					The Education-Employment Paradox: In 45% of countries worldwide, women outpace men in higher education enrollment yet still face higher unemployment rates. The "Paradox Zone" (upper-right quadrant) reveals a persistent structural disconnect between educational achievement and labor market outcomes.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li><strong>[Score: -1]</strong> <em>Dimming non-paradox countries in the scatter plot.</em> Countries outside the "paradox zone" (upper-right quadrant) are rendered smaller and more transparent, while paradox countries are larger and more vivid. This visual de-emphasis makes the 45% figure feel more dominant than it actually is - nearly half the data points fade into the background. This subtly guides the reader to perceive the paradox as the norm rather than one of several patterns in the data. I considered treating all points equally but found it made the paradox less visually striking.</li>
+
+				<li><strong>[Score: -1.5]</strong> <em>Bold red callout: "71/158 countries (44%) - More educated, yet more unemployed."</em> This prominent annotation in the upper-right quadrant frames what is a statistical observation as an alarming finding. The phrase "more educated, yet more unemployed" implies something is fundamentally broken, when in reality there are many structural, cultural, and economic reasons the relationship between education and employment is not 1:1. The large bold percentage and emotive italic subtitle function as a rhetorical anchor - once the reader sees it, they interpret the entire visualization through this framing. I chose this over a more neutral label like "Female enrollment > male, Female unemployment > male" because the rhetorical power was much stronger.</li>
+
+				<li><strong>[Score: 1]</strong> <em>Including the dual-axis time series (GPI vs. unemployment gap).</em> This inset honestly shows that while tertiary enrollment gender parity has improved globally, the unemployment gap has persisted. The data is accurately represented, but the juxtaposition is persuasive: it implies that rising education parity should have closed the unemployment gap, which is a reasonable but debatable assumption. The dual-axis design is earnest in that it transparently shows both trends.</li>
+
+				<li><strong>[Score: -0.5]</strong> <em>Selective country annotations highlighting extreme cases.</em> By labeling only the most dramatic outliers - Saudi Arabia, West Bank & Gaza, Egypt, Syria, Tunisia, Algeria - the scatter plot draws the eye to countries with the largest gaps. These are predominantly MENA nations with cultural and legal barriers to women's employment that are independent of education levels. Annotating only these extreme cases without context makes the "failure" of education seem more universal than it is, implying these outliers represent the broader pattern rather than a specific regional phenomenon.</li>
+
+				<li><strong>[Score: 1.5]</strong> <em>Sourcing and axis labels are transparent.</em> All axes are clearly labeled, the data source is cited, and the scatter plot uses a straightforward encoding (gap vs. gap). The reader can verify the claim by examining individual data points. This earnest decision builds trust, which in turn makes the more persuasive elements harder to detect.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="viz_against.png" alt="World map showing most countries in green where women's education gains have led to employment equality, with two time series charts showing women surpassing men in enrollment and entering the workforce." />
+				<figcaption>
+					Where women are more educated, employment follows: a world map reveals that across most of the globe - including the largest economies - women's gains in higher education have translated into workforce equality. The so-called "paradox" fades into the background as a regional outlier, not a global pattern.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li><strong>[Score: -1.5]</strong> <em>Choropleth map exploiting land area as a visual proxy for prevalence.</em> The map is the hero chart because countries like Russia, Canada, China, Australia, and the USA - which happen to have enormous land areas - are all colored green ("education leads to employment"). This makes the green visually dominate the map, creating the impression that the vast majority of the world shows no paradox. In reality, these are just 39 out of 158 countries, but they cover most of the map's surface. The MENA "paradox" countries, despite being 29 nations, occupy a tiny visual footprint. This is the most deceptive choice: it's technically accurate (each country is correctly classified) but perceptually misleading because land area ≠ country count ≠ population.</li>
+
+				<li><strong>[Score: -1]</strong> <em>Merging "paradox" countries into the same gray as "other."</em> By giving paradox countries the identical color as countries with less female education or no data, the visualization makes them invisible. The legend has only three categories - green, light green, and gray - with no separate label for "paradox." The reader literally cannot identify which gray countries have the paradox pattern without cross-referencing external data. This omission-by-design is a subtle but powerful way to suppress counter-evidence.</li>
+
+				<li><strong>[Score: -0.5]</strong> <em>Selectively averaging only "green" regions for the time series.</em> The bottom panels show enrollment crossover and labor force participation averaged across East Asia, Europe, and North America only - the regions that support the argument. Including Middle East & North Africa or the global average would show a different story. The footnote mentions this in small italic text, but the chart titles ("Women surpassed men in education...") don't qualify this as a regional subset, implying it's a universal trend.</li>
+
+				<li><strong>[Score: -0.5]</strong> <em>Tight y-axis on the labor force chart.</em> The right panel shows women's share of the labor force rising from 43.8% to 44.9% - a real but modest 1.1 percentage point increase over 30 years. By auto-scaling the y-axis tightly, the line appears to climb steeply, making the change look more dramatic than it is. A y-axis starting at 0% would show an almost flat line.</li>
+
+				<li><strong>[Score: 1.5]</strong> <em>Transparent sourcing and accurate data representation.</em> All data is from the World Bank, the classification criteria are stated in the legend, and no data points are fabricated or axes reversed. The enrollment crossover chart accurately shows female enrollment surpassing male enrollment. This earnest foundation makes the persuasive framing choices harder to detect.</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>
+        Designing these two opposing visualizations from the same dataset was a revealing exercise in how profoundly design choices shape the narrative data tells. The most surprising finding was that I rarely needed to resort to outright deception - techniques like truncating axes or fabricating data. Instead, the most powerful persuasive tools were selection (which data points to emphasize), framing (how to label and annotate findings), and structure (which chart goes where and how large it is). The "for" visualization is built on genuine data - 45% of countries really do show this paradox - but by dimming the other 55% and labeling the pattern dramatically, the exception becomes the perceived rule. Similarly, the "against" visualization uses entirely real progress metrics but carefully avoids mentioning the countries where education gains haven't translated to employment equality.
+      </p>
+
+      <p>
+        I now think of "ethical visualization" not as a binary between honest and dishonest, but as a spectrum of emphasis and omission. The most insidious form of misleading visualization isn't the obviously distorted chart - it's the technically accurate one that tells only half the story through selective framing. The boundary I'd draw is this: an "acceptable" persuasive choice makes a genuine pattern in the data more salient, while a "misleading" one obscures contradictory evidence or implies causation the data doesn't support. Both of my visualizations cross this line to some degree - the "for" version implies education should directly fix unemployment (ignoring confounding factors), and the "against" version implies progress in enrollment parity means the problem is largely solved (ignoring persistent gaps). This exercise has made me more skeptical as both a producer and consumer of data visualizations, recognizing that the most effective persuasion often hides in plain sight within design choices we might not even consciously notice.
+      </p>
+    </section>
+	</main>
+</body>
+</html>
